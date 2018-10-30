@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+void primeno(int n)
+{
+    int j=n;
+    if(n==1 || n==0)
+    {
+        return;
+    }
+    else if(n==2 || n==3)
+    {
+        cout << n;
+        return;
+    }
+    while(j<=n)
+    {
+        for(int i=3; i*i<=j; i+=2)
+        {
+            if(j%i==0)
+            return;
+        }
+        cout << j;
+        j++;
+    }
+    
+}
+
+int main()
+{
+    int n;
+    cin >> n;
+    primeno(n);
+    return 0;
+}
